@@ -1,0 +1,160 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+      <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Tech2etc Ecommerce Tutorial</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="{%static 'css/style.css'%}">
+    </head>
+
+    <body>
+         {% include 'header.html' %}
+    
+        {% block content %}  
+
+       
+            <section id="prodetails" class="section-p1">
+        <div class="single-pro-image">
+            <img src="{%static 'img/products/f1.jpg'%}" width="100%" id="MainImg" alt="">
+
+            <div class="small-img-group">
+                <div class="small-img-col">
+                    <img src="{%static 'img/products/f1.jpg'%}" width="100%" class="small-img" alt="">
+                </div>
+                <div class="small-img-col">
+                    <img src="{%static 'img/products/f2.jpg'%}" width="100%" class="small-img" alt="">
+                </div>
+                <div class="small-img-col">
+                    <img src="{%static 'img/products/f3.jpg'%}" width="100%" class="small-img" alt="">
+                </div>
+                <div class="small-img-col">
+                    <img src="{%static 'img/products/f4.jpg'%}" width="100%" class="small-img" alt="">
+                </div>
+            </div>
+        </div>
+
+        <div class="single-pro-details">
+            <h6>Home / T-Shirt</h6>
+            <h4>Red Printed T-Shirt by HRX</h4>
+            <h2>$108.00</h2>
+            <select>
+                <option>Select Size</option>
+                <option>XL</option>
+                <option>XXL</option>
+                <option>Large</option>
+                <option>Medium</option>
+                <option>Small</option>
+            </select>
+            <input type="number" value="1">
+            <button class="normal">Add To Cart</button>
+            <h4>Product Details</h4>
+            <span>Step into the world of trendy collections designed to make you stand out .</span>
+            <p>Discover a wide range of trendy and comfortable styles designed to fit every occasion. Our latest collection brings you fresh designs, premium quality, and unmatched value — all in one place. Shop confidently and enjoy a seamless fashion experience.</p>
+        </div>
+    </section>
+
+ <section id = "product1" class="section-p1">
+        
+        <div class="pro-container">
+         
+                <img src="{%static 'img/products/f1.jpg'%}" alt="">
+                <div class="des">
+                    <span>adidas</span>
+                    <h5>Cartoon Astronaut T-Shirts</h5>
+                    <div class="star">
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                       <span class="fa fa-star checked"></span>
+                    </div>
+                    <h4>$80</h4>
+                </div>
+                <a href="#"> <i class="fa fa-shopping-cart cart" style="font-size:24px"></i></a>
+            </div>
+
+             <div class="pro">
+                 <div class="pro" onclick="window.location.href='{% url 'sproduct' %}';">
+                <img src="{%static 'img/products/f2.jpg'%}" alt="">
+                <div class="des">
+                    <span>adidas</span>
+                    <h5>Cartoon Astronaut T-Shirts</h5>
+                    <div class="star">
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                       <span class="fa fa-star checked"></span>
+                    </div>
+                    <h4>$80</h4>
+                </div>
+                <a href="#"> <i class="fa fa-shopping-cart cart" style="font-size:24px"></i></a>
+            </div>
+
+             <div class="pro">
+                <img src="{%static 'img/products/f3.jpg'%}" alt="">
+                <div class="des">
+                    <span>adidas</span>
+                    <h5>Cartoon Astronaut T-Shirts</h5>
+                    <div class="star">
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                       <span class="fa fa-star checked"></span>
+                    </div>
+                    <h4>$80</h4>
+                </div>
+                <a href="#"> <i class="fa fa-shopping-cart cart" style="font-size:24px"></i></a>
+            </div>
+
+             <div class="pro">
+                <img src="{%static 'img/products/f4.jpg'%}" alt="">
+                <div class="des">
+                    <span>adidas</span>
+                    <h5>Cartoon Astronaut T-Shirts</h5>
+                    <div class="star">
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                       <span class="fa fa-star checked"></span>
+                    </div>
+                    <h4>$80</h4>
+                </div>
+                <a href="#"> <i class="fa fa-shopping-cart cart" style="font-size:24px"></i></a>
+            </div>
+
+          
+
+        </div>
+    </section>
+
+    <script>
+    var MainImg = document.getElementById("MainImg");
+    var smallimg = document.getElementsByClassName("small-img");
+
+    smallimg[0].onclick = function(){
+        MainImg.src = smallimg[0].src;
+    }
+     smallimg[1].onclick = function(){
+        MainImg.src = smallimg[1].src;
+    }
+     smallimg[2].onclick = function(){
+        MainImg.src = smallimg[2].src;
+    }
+     smallimg[3].onclick = function(){
+        MainImg.src = smallimg[3].src;
+    }
+</script>
+
+
+
+       <script src="{% static 'script.js' %}"></script>
+         {% endblock %}
+         {% include 'footer.html' %}
+    </body>
+</html>
