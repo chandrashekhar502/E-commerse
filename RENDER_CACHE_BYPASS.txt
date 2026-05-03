@@ -1,0 +1,6 @@
+# Force Render to recognize new commit
+# This file ensures Render pulls the latest code
+
+DEPLOYMENT_FIX_VERSION=2.2.0
+FIX_DATE=2026-05-03
+FIX_DESCRIPTION=Fixed Procfile syntax error - removed space in --log-file argument
