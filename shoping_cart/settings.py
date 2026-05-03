@@ -10,6 +10,9 @@ import os
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
+# Render deployment - version marker
+RENDER_DEPLOY_VERSION = 'v2.1.0-fixed-procfile'
+
 # Quick-start development settings - unsuitable for production
 SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', 'django-insecure-xa%y9l_n^2s!rz15hig&3%_zdv7h2mvd@w75k1t4p5ps3_1c$^')
 
