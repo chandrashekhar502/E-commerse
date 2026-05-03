@@ -11,12 +11,13 @@ import os
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 # Quick-start development settings - unsuitable for production
-SECRET_KEY = 'django-insecure-xa%y9l_n^2s!rz15hig&3%_zdv7h2mvd@w75k1t4p5ps3_1c$^'
+SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', 'django-insecure-xa%y9l_n^2s!rz15hig&3%_zdv7h2mvd@w75k1t4p5ps3_1c$^')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = os.environ.get('DJANGO_DEBUG', 'True') == 'True'
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
 # Application definition
 INSTALLED_APPS = [
@@ -32,6 +33,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -88,10 +90,12 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 STATIC_URL = 'static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 # यहाँ स्पेलिंग ठीक कर दी है: STATICFILES_DIRS
 STATICFILES_DIRS = [
     BASE_DIR / "s_card" / "static",
 ]
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 # Default primary key field type
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
