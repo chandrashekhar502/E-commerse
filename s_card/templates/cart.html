@@ -5,7 +5,8 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Tech2etc Ecommerce Tutorial</title>
+        <title>CARA E-Commerce - Shopping Cart</title>
+        <link rel="icon" type="image/svg+xml" href="{% static 'img/cara-favicon.svg' %}">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="{%static 'css/style.css'%}">
     </head>
@@ -17,8 +18,8 @@
 
        
              <section id="page-header" class="about-header">
-                <h2>#BUY Now</h2>
-                <p>LEAVE A MESSAGE, We Love to here from you</p>
+                <h2>#YOUR SHOPPING CART</h2>
+                <p>Review your items before checkout</p>
             </section>
 <section id="cart" class="section-p1">
     <table width="100%">
@@ -34,28 +35,36 @@
         </thead>
         <tbody>
             <tr>
-                <td><a href="#"><i class="fa fa-times-circle" aria-hidden="true"></i></a></td>
-                <td><img src="{%static 'img/products/f1.jpg'%}" alt=""></td>
-                <td>cartoon Astronaut T-Shirts</td>
+                <td><a href="javascript:void(0);"><i class="fa fa-times-circle" aria-hidden="true"></i></a></td>
+                <td><img src="{% static 'img/products/f1.jpg' %}" alt="Product 1" style="width: 80px; height: 80px; object-fit: cover;"></td>
+                <td>Cartoon Astronaut T-Shirts</td>
                 <td>$118.19</td>
-                <td><input type="number" value="1"></td>
-                <td>$$118.19</td>
+                <td><input type="number" value="1" min="1"></td>
+                <td>$118.19</td>
             </tr>
             <tr>
-                <td><a href="#"><i class="fa fa-times-circle" aria-hidden="true"></i></a></td>
-                <td><img src="{%static 'img/products/f2.jpg'%}" alt=""></td>
-                <td>cartoon Astronaut T-Shirts</td>
-                <td>$118.19</td>
-                <td><input type="number" value="1"></td>
-                <td>$$118.19</td>
+                <td><a href="javascript:void(0);"><i class="fa fa-times-circle" aria-hidden="true"></i></a></td>
+                <td><img src="{% static 'img/products/f2.jpg' %}" alt="Product 2" style="width: 80px; height: 80px; object-fit: cover;"></td>
+                <td>Blue Cotton T-Shirt</td>
+                <td>$95.50</td>
+                <td><input type="number" value="1" min="1"></td>
+                <td>$95.50</td>
             </tr>
             <tr>
-                <td><a href="#"><i class="fa fa-times-circle" aria-hidden="true"></i></a></td>
-                <td><img src="{%static 'img/products/f3.jpg'%}" alt=""></td>
-                <td>cartoon Astronaut T-Shirts</td>
-                <td>$118.19</td>
-                <td><input type="number" value="1"></td>
-                <td>$$118.19</td>
+                <td><a href="javascript:void(0);"><i class="fa fa-times-circle" aria-hidden="true"></i></a></td>
+                <td><img src="{% static 'img/products/f3.jpg' %}" alt="Product 3" style="width: 80px; height: 80px; object-fit: cover;"></td>
+                <td>Premium Casual Shirt</td>
+                <td>$145.00</td>
+                <td><input type="number" value="2" min="1"></td>
+                <td>$290.00</td>
+            </tr>
+            <tr>
+                <td><a href="javascript:void(0);"><i class="fa fa-times-circle" aria-hidden="true"></i></a></td>
+                <td><img src="{% static 'img/products/f4.jpg' %}" alt="Product 4" style="width: 80px; height: 80px; object-fit: cover;"></td>
+                <td>Classic Denim Shirt</td>
+                <td>$135.75</td>
+                <td><input type="number" value="1" min="1"></td>
+                <td>$135.75</td>
             </tr>
         </tbody>
     </table>
@@ -70,24 +79,7 @@
         </div>
     </div>
     <div id="subtotal">
-        <h3>Cart Totals</h3>
-        <table>
-            <tr>
-                <td>Cart Subtotal</td>
-                <td>$ 335</td>
-            </tr>
-
-            <tr>
-                <td>Shipping</td>
-                <td>Free</td>
-            </tr>
-
-            <tr>
-                <td><strong>Total</strong></td>
-                <td><strong>335$</strong></td>
-            </tr>
-        </table>
-        <button class="normal">Proceed to Checkout</button>
+        <!-- Cart totals will be populated here by JavaScript -->
     </div>
 
 </section>

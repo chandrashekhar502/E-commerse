@@ -38,6 +38,39 @@
   </a>
 </li>
 
+<li>
+  <a class="logout-btn {% if request.resolver_match.url_name == 'signup' %}active{% endif %}" 
+     href="{% url 'signup' %}">
+     
+     <i class="fa fa-sign-out"></i> Logout
+     
+  </a>
+</li>
+
+<style>
+.logout-btn {
+    background: linear-gradient(45deg, #ff4d4d, #ff0000);
+    color: #fff !important;
+    padding: 6px 18px;
+    border-radius: 25px;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.logout-btn:hover {
+    background: #cc0000;
+    transform: scale(1.08);
+    box-shadow: 0 4px 10px rgba(255, 0, 0, 0.3);
+}
+
+.logout-btn.active {
+    border: 2px solid #fff;
+}
+</style>
 
 
             

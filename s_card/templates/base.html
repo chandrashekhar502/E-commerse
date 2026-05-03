@@ -5,37 +5,19 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Tech2etc Ecommerce Tutorial</title>
+        <title>CARA E-Commerce</title>
+        <link rel="icon" type="image/svg+xml" href="{% static 'img/cara-favicon.svg' %}">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
        <link rel="stylesheet" href="{% static 'css/style.css' %}">
-
+       <!-- Chatbot Widget Styles -->
+       <link rel="stylesheet" href="{% static 'css/chatbot.css' %}">
 
     </head>
 
     <body>
-        <section id="header"> 
-    <a href="#"><img src="{% static 'img/logo.png' %}">  </a> 
+               {% include 'header.html' %}
 
-    <div> 
-        <ul id="navbar">
-            <li id="close"><i class="fa fa-times"></i></li>
-            <li><a class="active" href="{% url 'home' %}">Home</a></li>
-            
-            <li><a href="{% url 'shop' %}">Shop</a></li>
-            <li><a href="blog.html">Blog</a></li>
-             <li><a href="about.html">About</a></li>
-            <li><a href="contact.html">Contact</a></li>
-            <li><a href="cart.html"><i class="fa fa-shopping-bag"></i></a></li>
-        </ul>
-    </div>
-    
-    <div id="mobile">
-        <a href="cart.html"><i class="fa fa-shopping-bag"></i></a>
-        <i id="bar" class="fa fa-bars"></i>
-    </div>
-    
-    <div id="mobile-nav-overlay"></div>
-</section>
+        
             <section id="hero">
                 <h4>Trade-in-offer</h4>
                 <h2>Super value deals</h2>
@@ -460,5 +442,7 @@
 </footer>
 
          <script src="{% static 'script.js' %}"></script>
+         <!-- Chatbot Widget Script -->
+         <script src="{% static 'js/chatbot.js' %}"></script>
     </body>
     </html>
